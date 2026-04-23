@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HS - Handles Salong</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Georgia', serif; }
+        
+        /* NAV */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; border-bottom: 1px solid #2a2a2a; position: fixed; width: 100%; top: 0; background: #0a0a0a; z-index: 100; }
+        nav h1 { color: #ffffff; font-size: 24px; letter-spacing: 4px; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav ul li a { color: #aaaaaa; text-decoration: none; letter-spacing: 2px; font-size: 13px; transition: color 0.3s; }
+        nav ul li a:hover { color: #4a9e6b; }
+
+        /* HERO */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 1px solid #2a2a2a; }
+        .hero h2 { font-size: 60px; letter-spacing: 8px; margin-bottom: 20px; }
+        .hero p { color: #4a9e6b; letter-spacing: 4px; font-size: 14px; margin-bottom: 40px; }
+        .btn { padding: 15px 40px; border: 1px solid #4a9e6b; color: #4a9e6b; text-decoration: none; letter-spacing: 3px; font-size: 12px; transition: all 0.3s; }
+        .btn:hover { background-color: #4a9e6b; color: #0a0a0a; }
+
+        /* SECTIONS */
+        section { padding: 80px 50px; border-bottom: 1px solid #2a2a2a; }
+        section h3 { font-size: 28px; letter-spacing: 6px; text-align: center; margin-bottom: 60px; color: #ffffff; }
+
+        /* SERVICES */
+        .barbers { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .barber { width: 300px; }
+        .barber h4 { font-size: 20px; letter-spacing: 4px; color: #4a9e6b; margin-bottom: 30px; text-align: center; }
+        .service-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #1a1a1a; font-size: 14px; letter-spacing: 2px; color: #cccccc; }
+
+        /* REVIEWS */
+        .reviews { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .review-card { background: #ffffff; color: #0a0a0a; padding: 30px; width: 280px; border-radius: 4px; }
+        .stars { color: #4a9e6b; font-size: 20px; margin-bottom: 15px; }
+        .review-card p { font-size: 14px; line-height: 1.7; margin-bottom: 15px; color: #333333; }
+        .review-card span { font-size: 12px; letter-spacing: 2px; color: #666666; }
+
+        /* CONTACT */
+        .contact-grid { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+        .contact-item h4 { color: #4a9e6b; letter-spacing: 3px; font-size: 13px; margin-bottom: 15px; }
+        .contact-item p { color: #aaaaaa; font-size: 14px; line-height: 1.8; letter-spacing: 1px; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 30px; color: #444444; font-size: 12px; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>HS</h1>
+        <ul>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#reviews">REVIEWS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h2>HANDLES SALONG</h2>
+        <p>PRECISION CUTS · FALUN · EST. 2024</p>
+        <a href="#contact" class="btn">BOOK NOW</a>
+    </section>
+
+    <section id="services">
+        <h3>SERVICES</h3>
+        <div class="barbers">
+            <div class="barber">
+                <h4>DAVID</h4>
+                <div class="service-item"><span>Haircut</span><span>299 kr</span></div>
+                <div class="service-item"><span>Haircut + Beard</span><span>499 kr</span></div>
+                <div class="service-item"><span>Beard Trim</span><span>199 kr</span></div>
+                <div class="service-item"><span>Kids Cut</span><span>149 kr</span></div>
+            </div>
+            <div class="barber">
+                <h4>ELSA</h4>
+                <div class="service-item"><span>Women's Cut</span><span>600 kr</span></div>
+                <div class="service-item"><span>Color & Cut</span><span>899 kr</span></div>
+                <div class="service-item"><span>Blowdry & Style</span><span>350 kr</span></div>
+                <div class="service-item"><span>Treatment & Cut</span><span>750 kr</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h3>WHAT OUR CLIENTS SAY</h3>
+        <div class="reviews">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>David always delivers. Been coming here for two years and never once left disappointed. Best barber in Falun.</p>
+                <span>— MARCUS K.</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Elsa is absolutely fantastic. She knew exactly what I wanted even when I struggled to explain it. Will never go anywhere else.</p>
+                <span>— SOFIA L.</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Clean shop, great atmosphere and even better cuts. Brought my son for his first proper haircut and David made him feel right at home.</p>
+                <span>— ERIK J.</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3>FIND US</h3>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>ADDRESS</h4>
+                <p>Stockholmsgatan 12<br>791 60 Falun</p>
+            </div>
+            <div class="contact-item">
+                <h4>HOURS</h4>
+                <p>Mon–Fri: 09:00–18:00<br>Saturday: 10:00–15:00<br>Sunday: Closed</p>
+            </div>
+            <div class="contact-item">
+                <h4>CONTACT</h4>
+                <p>023-123 45 67<br>info@handlessalong.se</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 HANDLES SALONG · FALUN · ALL RIGHTS RESERVED</p>
+    </footer>
+
+</body>
+</html>
